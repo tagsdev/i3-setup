@@ -1,0 +1,21 @@
+#!/bin/sh
+#lock() {
+#  betterlockscreen -l
+#}
+
+case "$1" in
+  mobile)
+    autorandr mobile
+    ;;
+  landscape-docked)
+    autorandr docked-l
+    ;;
+  portrait-docked)
+    autorandr docked-p
+    ;;
+  *)
+    echo "Usage: $0 {mobile|landscape-docked|portrait-docked}"
+    exit 2
+esac
+                                                                                                                                                
+exit 0

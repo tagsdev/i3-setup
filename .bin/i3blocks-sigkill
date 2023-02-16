@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+pkill -SIGRTMIN+1 i3blocks
+pkill -SIGRTMIN+2 i3blocks
+pkill -SIGRTMIN+3 i3blocks
+pkill -SIGRTMIN+4 i3blocks
+pkill -SIGRTMIN+5 i3blocks
+pkill -SIGRTMIN+6 i3blocks
+pkill -SIGRTMIN+7 i3blocks
+pkill -SIGRTMIN+8 i3blocks
+pkill -SIGRTMIN+9 i3blocks
+pkill -SIGRTMIN+10 i3blocks
+pkill -SIGRTMIN+11 i3blocks

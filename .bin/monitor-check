@@ -1,0 +1,20 @@
+#!/bin/sh
+# This shell script is PUBLIC DOMAIN. You may do whatever you want with it.
+
+
+
+
+#!/bin/bash
+intern=eDP1
+extern=DP1
+
+/home/mcbtaguiad/.screenlayout/./mobile.sh
+
+if xrandr | grep "$extern disconnected"; then
+    /home/mcbtaguiad/.screenlayout/./mobile.sh
+else
+    /home/mcbtaguiad/.screenlayout/./docked.sh
+fi
+
+
+exit 0

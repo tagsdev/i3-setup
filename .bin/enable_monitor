@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+
+#USER=$1
+
+#sudo -u $USER DISPLAY=:0 autorandr --mobile
+#sudo -u $USER DISPLAY=:0 autorandr --change
+#autorandr mobile
+#autorandr --change
+
+
+
+#xset dpms force off
+#sleep 1
+
+
+xset dpms force off
+sleep 1.5
+xset s activate
+
+
+exit 0

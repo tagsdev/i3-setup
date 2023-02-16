@@ -1,0 +1,60 @@
+#!/bin/sh
+# This shell script is PUBLIC DOMAIN. You may do whatever you want with it.
+
+
+#pidx=$(pgrep xautolock)
+#pidy=$(pgrep -f fullscreen-sound-monitor)
+#status=$(xset q | grep -c "Standby: 0")
+
+pid=$(pgrep xidlehook)
+status1=$(ps p $pid | grep -c "Tl")
+status2=$(xset q | grep -c "Standby: 0")
+
+
+if [ "$status1" -gt "0" ] 
+then
+
+    #notify-send "Caffeine" "O" -u normal
+    kill -CONT $pid 
+    #kill -CONT $pidx  
+
+    
+    
+
+    #xset s 300 300  
+    #xset dpms 360 365 370 
+    #xset s on +dpms  
+
+    
+    xset dpms 300 310 320 
+    xset s on +dpms  
+    xset s 300 300  
+
+    pkill -SIGRTMIN+4 i3blocks  
+
+    
+else
+
+    #notify-send "Caffeine" "OFF" -u normal
+    
+    kill -STOP $pid
+    #kill -STOP $pidx  
+
+
+   
+    
+
+    xset dpms 0 0 0  
+    xset s 0 0  
+    xset s off -dpms 
+
+    pkill -SIGRTMIN+4 i3blocks  
+    
+
+    
+fi
+
+
+exit 0
+
+

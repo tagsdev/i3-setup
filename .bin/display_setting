@@ -1,0 +1,15 @@
+#!/bin/sh
+# This shell script is PUBLIC DOMAIN. You may do whatever you want with it.
+
+
+xset s 300 300  
+xset dpms 300 310 320 
+xset s on +dpms  
+
+
+#pactl set-sink-volume @DEFAULT_SINK@ 50%
+#i3-msg restart
+
+autorandr-c
+
+exit 0
